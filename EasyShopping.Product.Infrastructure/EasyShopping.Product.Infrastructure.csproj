@@ -19,8 +19,4 @@
     <ProjectReference Include="..\EasyShopping.Product.Core\EasyShopping.Product.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>

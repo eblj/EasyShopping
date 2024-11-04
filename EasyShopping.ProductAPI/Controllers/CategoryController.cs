@@ -8,11 +8,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace EasyShopping.ProductAPI.Controllers
 {
     [ApiController]
-    [Route("product")]
-    public class ProductController : ControllerBase
+    [Route("category")]
+    public class CategoryController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public ProductController(IMediator mediator)
+        public CategoryController(IMediator mediator)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }
@@ -22,7 +22,7 @@ namespace EasyShopping.ProductAPI.Controllers
         {
             try
             {
-                FindProductByIdQuery query = new FindProductByIdQuery(id);
+                FindCategoryByIdQuery query = new FindCategoryByIdQuery(id);
                 var result = await _mediator.Send(query);
                 return result.IsSuccess ? Ok(result) : BadRequest(result);
             }
@@ -37,7 +37,7 @@ namespace EasyShopping.ProductAPI.Controllers
         {
             try
             {
-                FindAllProductsQuery query = new FindAllProductsQuery();
+                FindAllCategoriesQuery query = new FindAllCategoriesQuery();
                 var result = await _mediator.Send(query);
                 return result.IsSuccess ? Ok(result) : BadRequest(result);
             }
@@ -48,11 +48,11 @@ namespace EasyShopping.ProductAPI.Controllers
         }
 
         [HttpPost("find-all-paged")]
-        public async Task<IActionResult> FindAllPaged([FromBody]FilterViewModel filter)
+        public async Task<IActionResult> FindAllPaged([FromBody] FilterViewModel filter)
         {
             try
             {
-                FindAllProductsPagedQuery query = new FindAllProductsPagedQuery(filter);
+                FindAllCategoriesPagedQuery query = new FindAllCategoriesPagedQuery(filter);
                 var result = await _mediator.Send(query);
                 return result.IsSuccess ? Ok(result) : BadRequest(result);
             }
@@ -63,12 +63,12 @@ namespace EasyShopping.ProductAPI.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> Create([FromBody]ProductViewModel model)
+        public async Task<IActionResult> Create([FromBody] CategoryViewModel model)
         {
             try
             {
-                CreateProductCommand command = new CreateProductCommand(model);
-                var result = await _mediator.Send(command); 
+                CreateCategoryCommand command = new CreateCategoryCommand(model);
+                var result = await _mediator.Send(command);
                 return result.IsSuccess ? Ok(result) : BadRequest(result);
             }
             catch (Exception ex)
@@ -78,15 +78,15 @@ namespace EasyShopping.ProductAPI.Controllers
         }
 
         [HttpPut("update/{id}")]
-        public async Task<IActionResult> Update([FromBody]ProductViewModel model, Guid id)
+        public async Task<IActionResult> Update([FromBody] CategoryViewModel model, Guid id)
         {
             try
             {
                 if (id == Guid.Empty || id != model.Id)
                     return BadRequest("The id is null or invalid operation.");
 
-                UpdateProductCommand command = new UpdateProductCommand(model);
-                var result = await _mediator.Send(command); 
+                UpdateCategoryCommand command = new UpdateCategoryCommand(model);
+                var result = await _mediator.Send(command);
                 return result.IsSuccess ? Ok(result) : BadRequest(result);
             }
             catch (Exception ex)
@@ -100,8 +100,8 @@ namespace EasyShopping.ProductAPI.Controllers
         {
             try
             {
-                DeleteProductByIdCommand command = new DeleteProductByIdCommand(id);
-                var result = await _mediator.Send(command); 
+                DeleteCategoryByIdCommand command = new DeleteCategoryByIdCommand(id);
+                var result = await _mediator.Send(command);
                 return result.IsSuccess ? Ok(result) : BadRequest(result);
             }
             catch (Exception ex)

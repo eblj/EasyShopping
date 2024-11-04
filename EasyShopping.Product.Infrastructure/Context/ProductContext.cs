@@ -16,7 +16,7 @@ namespace EasyShopping.Product.Infrastructure.Context
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
-        DbSet<Core.Entities.Product> Products { get; set; }
-        DbSet<Core.Entities.Category> Categories { get; set; }
+        public DbSet<Core.Entities.Product> Products { get; set; }
+        public DbSet<Core.Entities.Category> Categories { get; set; }
     }
 }
