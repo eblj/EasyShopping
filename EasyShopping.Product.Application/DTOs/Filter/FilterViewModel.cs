@@ -1,6 +1,6 @@
 ﻿using EasyShopping.Product.Application.Enums;
 
-namespace EasyShopping.Product.Application.DTOs.Filter
+namespace EasyShopping.Product.Application.DTOs
 {
     public class FilterViewModel
     {

@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using EasyShopping.Product.Application.Abstractions;
-using EasyShopping.Product.Application.DTOs;
 using EasyShopping.Product.Application.Validators;
-using EasyShopping.Product.Core.Entities;
 using EasyShopping.Product.Core.Repositories;
 using MediatR;
 

@@ -1,7 +1,6 @@
 using EasyShopping.Product.Application.CQRS.Commands;
 using EasyShopping.Product.Application.CQRS.Queries;
 using EasyShopping.Product.Application.DTOs;
-using EasyShopping.Product.Application.DTOs.Filter;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -77,14 +76,11 @@ namespace EasyShopping.ProductAPI.Controllers
             }
         }
 
-        [HttpPut("update/{id}")]
-        public async Task<IActionResult> Update([FromBody] CategoryViewModel model, Guid id)
+        [HttpPut("update")]
+        public async Task<IActionResult> Update([FromBody] CategoryViewModel model)
         {
             try
             {
-                if (id == Guid.Empty || id != model.Id)
-                    return BadRequest("The id is null or invalid operation.");
-
                 UpdateCategoryCommand command = new UpdateCategoryCommand(model);
                 var result = await _mediator.Send(command);
                 return result.IsSuccess ? Ok(result) : BadRequest(result);

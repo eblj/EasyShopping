@@ -62,5 +62,10 @@ namespace EasyShopping.Product.Infrastructure.Repositories
 
             return query.Skip(currentPage * recordsByPage).Take(recordsByPage).ToList();
         }
+
+        public async Task<bool> CheckIfExistsProductsInCategoryById(Guid id)
+        {
+            return await _context.Products.CountAsync(p => p.CategoryId.Equals(id)) > 0;
+        }
     }
 }

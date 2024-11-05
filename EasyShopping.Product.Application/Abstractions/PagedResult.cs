@@ -1,4 +1,4 @@
-﻿using EasyShopping.Product.Application.DTOs.Filter;
+﻿using EasyShopping.Product.Application.DTOs;
 
 namespace EasyShopping.Product.Application.Abstractions
 {

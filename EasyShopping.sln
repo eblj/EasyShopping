@@ -11,15 +11,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{50
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Product", "Product", "{DD7340C5-51E6-4DD6-B079-7A26C8CB8811}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Product.API", "EasyShopping.ProductAPI\EasyShopping.Product.API.csproj", "{B822D2E9-61BF-4AB5-B1F5-B43EF6B8F39E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Product.API", "EasyShopping.ProductAPI\EasyShopping.Product.API.csproj", "{B822D2E9-61BF-4AB5-B1F5-B43EF6B8F39E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Product.Application", "EasyShopping.Product.Application\EasyShopping.Product.Application.csproj", "{DA42FE83-6072-4AC1-BC0E-D01CBD4F987E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Product.Application", "EasyShopping.Product.Application\EasyShopping.Product.Application.csproj", "{DA42FE83-6072-4AC1-BC0E-D01CBD4F987E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Product.Core", "EasyShopping.Product.Core\EasyShopping.Product.Core.csproj", "{449BCB1F-5A25-48DC-AAE8-FA27773AF5F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Product.Core", "EasyShopping.Product.Core\EasyShopping.Product.Core.csproj", "{449BCB1F-5A25-48DC-AAE8-FA27773AF5F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Product.Infrastructure", "EasyShopping.Product.Infrastructure\EasyShopping.Product.Infrastructure.csproj", "{9C711A8F-7C27-4B87-B74C-D5E879B47366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Product.Infrastructure", "EasyShopping.Product.Infrastructure\EasyShopping.Product.Infrastructure.csproj", "{9C711A8F-7C27-4B87-B74C-D5E879B47366}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Product.IoC", "EasyShopping.Product.IoC\EasyShopping.Product.IoC.csproj", "{50531776-F663-4985-90A8-54819B736AE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Product.IoC", "EasyShopping.Product.IoC\EasyShopping.Product.IoC.csproj", "{50531776-F663-4985-90A8-54819B736AE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cart", "Cart", "{D3B1D620-6522-46E3-A916-69BC09292340}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Cart.API", "EasyShopping.Cart.API\EasyShopping.Cart.API.csproj", "{6E6B2379-2949-4087-B945-C5BACCEA0B06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Cart.Application", "EasyShopping.Cart.Application\EasyShopping.Cart.Application.csproj", "{2A7E3382-868B-4CCC-B32F-8D948822549B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Cart.Core", "EasyShopping.Cart.Core\EasyShopping.Cart.Core.csproj", "{291264A8-E021-41CE-9D40-6E44730612B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Cart.Infrastructure", "EasyShopping.Cart.Infrastructure\EasyShopping.Cart.Infrastructure.csproj", "{360C62DA-CAB6-48B4-BCFA-80DE25AD0C21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Cart.Ioc", "EasyShopping.Cart.Ioc\EasyShopping.Cart.Ioc.csproj", "{5A6C3F28-E1A9-4AFC-9721-340D82056DDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +59,26 @@ Global
 		{50531776-F663-4985-90A8-54819B736AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50531776-F663-4985-90A8-54819B736AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50531776-F663-4985-90A8-54819B736AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E6B2379-2949-4087-B945-C5BACCEA0B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6B2379-2949-4087-B945-C5BACCEA0B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6B2379-2949-4087-B945-C5BACCEA0B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6B2379-2949-4087-B945-C5BACCEA0B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7E3382-868B-4CCC-B32F-8D948822549B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7E3382-868B-4CCC-B32F-8D948822549B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7E3382-868B-4CCC-B32F-8D948822549B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7E3382-868B-4CCC-B32F-8D948822549B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291264A8-E021-41CE-9D40-6E44730612B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291264A8-E021-41CE-9D40-6E44730612B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291264A8-E021-41CE-9D40-6E44730612B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291264A8-E021-41CE-9D40-6E44730612B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{360C62DA-CAB6-48B4-BCFA-80DE25AD0C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{360C62DA-CAB6-48B4-BCFA-80DE25AD0C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{360C62DA-CAB6-48B4-BCFA-80DE25AD0C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{360C62DA-CAB6-48B4-BCFA-80DE25AD0C21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A6C3F28-E1A9-4AFC-9721-340D82056DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A6C3F28-E1A9-4AFC-9721-340D82056DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A6C3F28-E1A9-4AFC-9721-340D82056DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A6C3F28-E1A9-4AFC-9721-340D82056DDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +90,12 @@ Global
 		{449BCB1F-5A25-48DC-AAE8-FA27773AF5F6} = {DD7340C5-51E6-4DD6-B079-7A26C8CB8811}
 		{9C711A8F-7C27-4B87-B74C-D5E879B47366} = {DD7340C5-51E6-4DD6-B079-7A26C8CB8811}
 		{50531776-F663-4985-90A8-54819B736AE6} = {DD7340C5-51E6-4DD6-B079-7A26C8CB8811}
+		{D3B1D620-6522-46E3-A916-69BC09292340} = {50ABE7CF-1FD6-492C-8C3E-CA0BAA1B90A0}
+		{6E6B2379-2949-4087-B945-C5BACCEA0B06} = {D3B1D620-6522-46E3-A916-69BC09292340}
+		{2A7E3382-868B-4CCC-B32F-8D948822549B} = {D3B1D620-6522-46E3-A916-69BC09292340}
+		{291264A8-E021-41CE-9D40-6E44730612B4} = {D3B1D620-6522-46E3-A916-69BC09292340}
+		{360C62DA-CAB6-48B4-BCFA-80DE25AD0C21} = {D3B1D620-6522-46E3-A916-69BC09292340}
+		{5A6C3F28-E1A9-4AFC-9721-340D82056DDF} = {D3B1D620-6522-46E3-A916-69BC09292340}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9E2C1F3-3FD8-46EA-BF9F-24B0170D8332}
