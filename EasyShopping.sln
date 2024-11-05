@@ -23,15 +23,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Product.IoC", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cart", "Cart", "{D3B1D620-6522-46E3-A916-69BC09292340}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Cart.API", "EasyShopping.Cart.API\EasyShopping.Cart.API.csproj", "{6E6B2379-2949-4087-B945-C5BACCEA0B06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Cart.API", "EasyShopping.Cart.API\EasyShopping.Cart.API.csproj", "{6E6B2379-2949-4087-B945-C5BACCEA0B06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Cart.Application", "EasyShopping.Cart.Application\EasyShopping.Cart.Application.csproj", "{2A7E3382-868B-4CCC-B32F-8D948822549B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Cart.Application", "EasyShopping.Cart.Application\EasyShopping.Cart.Application.csproj", "{2A7E3382-868B-4CCC-B32F-8D948822549B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Cart.Core", "EasyShopping.Cart.Core\EasyShopping.Cart.Core.csproj", "{291264A8-E021-41CE-9D40-6E44730612B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Cart.Core", "EasyShopping.Cart.Core\EasyShopping.Cart.Core.csproj", "{291264A8-E021-41CE-9D40-6E44730612B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Cart.Infrastructure", "EasyShopping.Cart.Infrastructure\EasyShopping.Cart.Infrastructure.csproj", "{360C62DA-CAB6-48B4-BCFA-80DE25AD0C21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Cart.Infrastructure", "EasyShopping.Cart.Infrastructure\EasyShopping.Cart.Infrastructure.csproj", "{360C62DA-CAB6-48B4-BCFA-80DE25AD0C21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Cart.Ioc", "EasyShopping.Cart.Ioc\EasyShopping.Cart.Ioc.csproj", "{5A6C3F28-E1A9-4AFC-9721-340D82056DDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping.Cart.Ioc", "EasyShopping.Cart.Ioc\EasyShopping.Cart.Ioc.csproj", "{5A6C3F28-E1A9-4AFC-9721-340D82056DDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Coupon", "Coupon", "{2E30E431-6C16-402B-ADB7-BEF157CF6AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Coupon.API", "EasyShopping.Coupon.API\EasyShopping.Coupon.API.csproj", "{52E7B06B-A3E9-48DA-AE2C-2056FD683884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Coupon.Application", "EasyShopping.Coupon.Application\EasyShopping.Coupon.Application.csproj", "{D2CA8548-67F6-4967-942E-6D5DE775929D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Coupon.Core", "EasyShopping.Coupon.Core\EasyShopping.Coupon.Core.csproj", "{7CC20A8B-A075-4AAA-A7C8-AB5AFF0A6364}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Coupon.Infrastructure", "EasyShopping.Coupon.Infrastructure\EasyShopping.Coupon.Infrastructure.csproj", "{8CC2F1F0-C074-4DB0-B6EE-EFA2E326CE79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Coupon.IoC", "EasyShopping.Coupon.IoC\EasyShopping.Coupon.IoC.csproj", "{DF88EE1A-3EA5-41F2-983E-D148FA9A9423}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +91,26 @@ Global
 		{5A6C3F28-E1A9-4AFC-9721-340D82056DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A6C3F28-E1A9-4AFC-9721-340D82056DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A6C3F28-E1A9-4AFC-9721-340D82056DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E7B06B-A3E9-48DA-AE2C-2056FD683884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E7B06B-A3E9-48DA-AE2C-2056FD683884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E7B06B-A3E9-48DA-AE2C-2056FD683884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E7B06B-A3E9-48DA-AE2C-2056FD683884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2CA8548-67F6-4967-942E-6D5DE775929D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2CA8548-67F6-4967-942E-6D5DE775929D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2CA8548-67F6-4967-942E-6D5DE775929D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2CA8548-67F6-4967-942E-6D5DE775929D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC20A8B-A075-4AAA-A7C8-AB5AFF0A6364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC20A8B-A075-4AAA-A7C8-AB5AFF0A6364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC20A8B-A075-4AAA-A7C8-AB5AFF0A6364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CC20A8B-A075-4AAA-A7C8-AB5AFF0A6364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC2F1F0-C074-4DB0-B6EE-EFA2E326CE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC2F1F0-C074-4DB0-B6EE-EFA2E326CE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC2F1F0-C074-4DB0-B6EE-EFA2E326CE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC2F1F0-C074-4DB0-B6EE-EFA2E326CE79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF88EE1A-3EA5-41F2-983E-D148FA9A9423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF88EE1A-3EA5-41F2-983E-D148FA9A9423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF88EE1A-3EA5-41F2-983E-D148FA9A9423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF88EE1A-3EA5-41F2-983E-D148FA9A9423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +128,12 @@ Global
 		{291264A8-E021-41CE-9D40-6E44730612B4} = {D3B1D620-6522-46E3-A916-69BC09292340}
 		{360C62DA-CAB6-48B4-BCFA-80DE25AD0C21} = {D3B1D620-6522-46E3-A916-69BC09292340}
 		{5A6C3F28-E1A9-4AFC-9721-340D82056DDF} = {D3B1D620-6522-46E3-A916-69BC09292340}
+		{2E30E431-6C16-402B-ADB7-BEF157CF6AFA} = {50ABE7CF-1FD6-492C-8C3E-CA0BAA1B90A0}
+		{52E7B06B-A3E9-48DA-AE2C-2056FD683884} = {2E30E431-6C16-402B-ADB7-BEF157CF6AFA}
+		{D2CA8548-67F6-4967-942E-6D5DE775929D} = {2E30E431-6C16-402B-ADB7-BEF157CF6AFA}
+		{7CC20A8B-A075-4AAA-A7C8-AB5AFF0A6364} = {2E30E431-6C16-402B-ADB7-BEF157CF6AFA}
+		{8CC2F1F0-C074-4DB0-B6EE-EFA2E326CE79} = {2E30E431-6C16-402B-ADB7-BEF157CF6AFA}
+		{DF88EE1A-3EA5-41F2-983E-D148FA9A9423} = {2E30E431-6C16-402B-ADB7-BEF157CF6AFA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9E2C1F3-3FD8-46EA-BF9F-24B0170D8332}
