@@ -4,5 +4,6 @@
     {
         public string Code { get; set; }
         public decimal DiscountAmount { get; set; }
+        public DateTime Validate { get; set; }
     }
 }

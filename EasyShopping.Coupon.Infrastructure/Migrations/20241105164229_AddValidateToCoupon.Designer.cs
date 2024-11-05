@@ -4,6 +4,7 @@ using EasyShopping.Coupon.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EasyShopping.Coupon.Infrastructure.Migrations
 {
     [DbContext(typeof(CouponContext))]
-    partial class CouponContextModelSnapshot : ModelSnapshot
+    [Migration("20241105164229_AddValidateToCoupon")]
+    partial class AddValidateToCoupon
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

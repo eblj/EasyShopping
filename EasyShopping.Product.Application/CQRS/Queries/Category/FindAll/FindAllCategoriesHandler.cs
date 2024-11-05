@@ -21,7 +21,7 @@ namespace EasyShopping.Product.Application.CQRS.Queries
         {
             try
             {
-                var categories = await _unitOfWork.Categories.FindAllAsync();
+                var categories = await _unitOfWork.CategoryRepository.FindAllAsync();
                 if (categories is not null)
                     return Result<List<CategoryViewModel>>.Success(_mapper.Map<List<CategoryViewModel>>(categories));
                 else

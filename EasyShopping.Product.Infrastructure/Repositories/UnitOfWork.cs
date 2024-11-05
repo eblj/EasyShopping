@@ -9,12 +9,12 @@ namespace EasyShopping.Product.Infrastructure.Repositories
         public UnitOfWork(ProductContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
-            Products = new ProductRepository(_context);
-            Categories = new CategoryRepository(_context);
+            ProductRepository = new ProductRepository(_context);
+            CategoryRepository = new CategoryRepository(_context);
         }
 
-        public IProductRepository Products { get; private set; }
-        public ICategoryRepository Categories { get; private set; }
+        public IProductRepository ProductRepository { get; private set; }
+        public ICategoryRepository CategoryRepository { get; private set; }
 
         public int Complete()
         {

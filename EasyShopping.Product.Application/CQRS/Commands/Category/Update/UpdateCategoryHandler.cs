@@ -25,7 +25,7 @@ namespace EasyShopping.Product.Application.CQRS.Commands
                 var resultValidate = updateCategorytValidator.Validate(request);
                 if (resultValidate.IsValid)
                 {
-                    var updatedCategory = await _unitOfWork.Categories.UpdateAsync(_mapper.Map<Core.Entities.Category>(request.Category));
+                    var updatedCategory = await _unitOfWork.CategoryRepository.UpdateAsync(_mapper.Map<Core.Entities.Category>(request.Category));
                     var commit = _unitOfWork.Complete();
                     return commit > 0 ? Result<Guid>.Success(updatedCategory.Id) : Result<Guid>.Failure("Failed to update the category.");
                 }

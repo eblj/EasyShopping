@@ -25,7 +25,7 @@ namespace EasyShopping.Product.Application.CQRS.Commands
                 var resultValidate = createCategoryValidator.Validate(request);
                 if (resultValidate.IsValid)
                 {
-                    var createdProduct = await _unitOfWork.Categories.CreateAsync(_mapper.Map<Core.Entities.Category>(request.Category));
+                    var createdProduct = await _unitOfWork.CategoryRepository.CreateAsync(_mapper.Map<Core.Entities.Category>(request.Category));
                     var commit = _unitOfWork.Complete();
                     return commit > 0 ? Result<Guid>.Success(createdProduct.Id) : Result<Guid>.Failure("Failed to create the category.");
                 }

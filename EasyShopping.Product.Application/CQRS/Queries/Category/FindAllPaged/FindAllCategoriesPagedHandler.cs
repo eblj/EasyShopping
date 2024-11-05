@@ -27,7 +27,7 @@ namespace EasyShopping.Product.Application.CQRS.Queries
                 var resultValidate = findAllCategoriesPagedValidator.Validate(request);
                 if (resultValidate.IsValid)
                 {
-                    var categoriesPaged = _unitOfWork.Categories.FindAllPaged(out totalRecords, request.Filter.CurrentPage, request.Filter.RecordsByPage, request.Filter.SearchBy, request.Filter.Search, request.Filter.OrderBy, (int)request.Filter.Direction);
+                    var categoriesPaged = _unitOfWork.CategoryRepository.FindAllPaged(out totalRecords, request.Filter.CurrentPage, request.Filter.RecordsByPage, request.Filter.SearchBy, request.Filter.Search, request.Filter.OrderBy, (int)request.Filter.Direction);
                     if (categoriesPaged is not null && categoriesPaged.Count > 0)
                     {
                         request.Filter.TotalRecords = totalRecords;

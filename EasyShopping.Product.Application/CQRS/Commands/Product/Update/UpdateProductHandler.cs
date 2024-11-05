@@ -25,7 +25,7 @@ namespace EasyShopping.Product.Application.CQRS.Commands
                 var resultValidate = updateProductValidator.Validate(request);
                 if (resultValidate.IsValid)
                 {
-                    var updatedProduct = await _unitOfWork.Products.UpdateAsync(_mapper.Map<Core.Entities.Product>(request.Product));
+                    var updatedProduct = await _unitOfWork.ProductRepository.UpdateAsync(_mapper.Map<Core.Entities.Product>(request.Product));
                     var commit = _unitOfWork.Complete();
                     return commit > 0 ? Result<Guid>.Success(updatedProduct.Id) : Result<Guid>.Failure("Failed to update the product.");
                 }

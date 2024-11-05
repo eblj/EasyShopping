@@ -9,5 +9,7 @@ namespace EasyShopping.Coupon.Core.Entities
         public string Code { get; set; }
         [Required]
         public decimal DiscountAmount { get; set; }
+        [Required]
+        public DateTime Validate { get; set; }
     }
 }

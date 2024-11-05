@@ -25,11 +25,11 @@ namespace EasyShopping.Product.Application.CQRS.Commands
                 var resultValidate = deleteCategoryValidator.Validate(request);
                 if (resultValidate.IsValid)
                 {
-                    var existsProductsInCategory = await _unitOfWork.Categories.CheckIfExistsProductsInCategoryById(request.Id);
+                    var existsProductsInCategory = await _unitOfWork.CategoryRepository.CheckIfExistsProductsInCategoryById(request.Id);
                     if (existsProductsInCategory)
                         return Result<int>.Failure("Not allowed, there are products in this category.");
 
-                    await _unitOfWork.Categories.DeleteByIdAsync(request.Id);
+                    await _unitOfWork.CategoryRepository.DeleteByIdAsync(request.Id);
                     var commit = _unitOfWork.Complete();
                     return commit > 0 ? Result<int>.Success(commit) : Result<int>.Failure("Failed to delete the category.");
                 }

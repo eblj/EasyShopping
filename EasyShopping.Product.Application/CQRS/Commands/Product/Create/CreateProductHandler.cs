@@ -25,7 +25,7 @@ namespace EasyShopping.Product.Application.CQRS.Commands
                 var resultValidate = createProductValidator.Validate(request);
                 if (resultValidate.IsValid)
                 {
-                    var createdProduct = await _unitOfWork.Products.CreateAsync(_mapper.Map<Core.Entities.Product>(request.Product));
+                    var createdProduct = await _unitOfWork.ProductRepository.CreateAsync(_mapper.Map<Core.Entities.Product>(request.Product));
                     var commit = _unitOfWork.Complete();
                     return commit > 0 ? Result<Guid>.Success(createdProduct.Id) : Result<Guid>.Failure("Failed to create the product.");
                 }

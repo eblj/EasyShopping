@@ -24,7 +24,7 @@ namespace EasyShopping.Product.Application.CQRS.Queries.Product
                 if (request is null || request.Id.Equals(Guid.Empty))
                     return Result<ProductViewModel>.Failure("The id is required.");
 
-                var product = await _unitOfWork.Products.FindByIdAsync(request.Id);
+                var product = await _unitOfWork.ProductRepository.FindByIdAsync(request.Id);
                 if (product is not null)
                     return Result<ProductViewModel>.Success(_mapper.Map<ProductViewModel>(product));
                 else

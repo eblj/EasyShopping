@@ -24,7 +24,7 @@ namespace EasyShopping.Product.Application.CQRS.Queries
                 if (request is null || request.Id.Equals(Guid.Empty))
                     return Result<CategoryViewModel>.Failure("The id is required.");
 
-                var category = await _unitOfWork.Categories.FindByIdAsync(request.Id);
+                var category = await _unitOfWork.CategoryRepository.FindByIdAsync(request.Id);
                 if (category is not null)
                     return Result<CategoryViewModel>.Success(_mapper.Map<CategoryViewModel>(category));
                 else

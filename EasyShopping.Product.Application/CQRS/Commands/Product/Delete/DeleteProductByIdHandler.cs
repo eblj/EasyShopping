@@ -30,7 +30,7 @@ namespace EasyShopping.Product.Application.CQRS.Commands
                 var resultValidate = deleteProductValidator.Validate(request);
                 if (resultValidate.IsValid)
                 {
-                    await _unitOfWork.Products.DeleteByIdAsync(request.Id);
+                    await _unitOfWork.ProductRepository.DeleteByIdAsync(request.Id);
                     var commit = _unitOfWork.Complete();
                     return commit > 0 ? Result<int>.Success(commit) : Result<int>.Failure("Failed to delete the product.");
                 }

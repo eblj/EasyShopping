@@ -21,7 +21,7 @@ namespace EasyShopping.Product.Application.CQRS.Queries
         {
             try
             {
-                var products = await _unitOfWork.Products.FindAllAsync();
+                var products = await _unitOfWork.ProductRepository.FindAllAsync();
                 if(products is not null)
                     return Result<List<ProductViewModel>>.Success(_mapper.Map<List<ProductViewModel>>(products));
                 else
